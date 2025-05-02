@@ -66,5 +66,3 @@ Route::get('/admin/dashboard', [DashboardController::class,'vistaDashboard'])->n
 
 Route::get('/xml', [XmlController::class, 'mostrar']);
 
-Route::get('/calculadora', [CalculadoraController::class, 'index']);
-Route::post('/calcular', [CalculadoraController::class, 'calcular']);
