@@ -6,6 +6,11 @@ use Illuminate\Http\Request;
 
 class XmlController extends Controller
 {
+    public function index()
+    {
+        return view('preferencias');
+    }
+    
     public function mostrar()
     {
         $xmlPath = storage_path('xml/libros.xml');
@@ -30,7 +35,7 @@ class XmlController extends Controller
         $jsonLibros = json_encode($libros);
 
         // Enviamos el JSON decodificado a la vista
-        return view('preferencias', ['libros' => json_decode($jsonLibros)]);
+        return view('preferencias', ['libros' => json_decode($jsonLibros,true)]);
     }
 }
 
