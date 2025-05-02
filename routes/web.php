@@ -13,6 +13,8 @@ use App\Http\Controllers\CalculadoraController;
 
 use App\Http\Controllers\Backend\Dashboard\DashboardController;
 
+use App\Http\Controllers\CalculadoraController;
+
 
 // --- LOGIN ---
 
@@ -25,6 +27,10 @@ Route::post('/admin/logout', [LoginController::class, 'logout'])->name('admin.lo
 
 Route::get('/panel', [ControlController::class,'indexRedireccionamiento'])->name('admin.panel');
 
+// --- CALCULADORA SOAP ---
+
+Route::get('/calculadora', [CalculadoraController::class, 'index']);
+Route::post('/calcular', [CalculadoraController::class, 'calcular'])->name('calcular');
 // --- ROLES ---
 
 Route::get('/admin/roles/index', [RolesController::class,'index'])->name('admin.roles.index');
