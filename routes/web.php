@@ -9,7 +9,7 @@ use App\Http\Controllers\Backend\Perfil\PerfilController;
 use App\Http\Controllers\Backend\Configuracion\ConfiguracionController;
 use App\Http\Controllers\Backend\Registro\RegistroController;
 use App\Http\Controllers\XmlController;
-
+use App\Http\Controllers\CalculadoraController;
 
 use App\Http\Controllers\Backend\Dashboard\DashboardController;
 
@@ -59,3 +59,5 @@ Route::get('/admin/dashboard', [DashboardController::class,'vistaDashboard'])->n
 
 Route::get('/xml', [XmlController::class, 'mostrar']);
 
+Route::get('/calculadora', [CalculadoraController::class, 'index']);
+Route::post('/calcular', [CalculadoraController::class, 'calcular']);
