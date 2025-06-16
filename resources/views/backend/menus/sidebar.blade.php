@@ -9,7 +9,14 @@
 
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="true">
-
+                
+                <li class="nav-item">
+                    <a href="{{ route('libros.index') }}" target="frameprincipal" class="nav-link">
+                        <i class="far fa-book"></i>
+                        <p>Libros</p>
+                    </a>
+                </li>
+                
                 <!-- ROLES Y PERMISO -->
                 @can('sidebar.roles.y.permisos')
                  <li class="nav-item">
