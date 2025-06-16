@@ -25,5 +25,10 @@ class RolesSeeder extends Seeder
         // PERMISO PARA VISTA DASHBOARD
         Permission::create(['name' => 'sidebar.dashboard', 'description' => 'sidebar dashboard'])->syncRoles($roleUsuario);
 
+        // PERMISOS PARA LIBROS
+        Permission::create(['name' => 'libros.view', 'description' => 'Ver listado de libros'])->syncRoles([$roleAdmin, $roleUsuario]);
+        Permission::create(['name' => 'libros.create', 'description' => 'Crear nuevos libros'])->syncRoles($roleAdmin);
+        Permission::create(['name' => 'libros.edit', 'description' => 'Editar libros existentes'])->syncRoles($roleAdmin);
+        Permission::create(['name' => 'libros.delete', 'description' => 'Eliminar libros'])->syncRoles($roleAdmin);
     }
 }

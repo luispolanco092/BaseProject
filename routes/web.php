@@ -67,4 +67,31 @@ Route::get('/admin/dashboard', [DashboardController::class, 'vistaDashboard'])->
 
 Route::get('/xml', [XmlController::class, 'mostrar']);
 
-Route::resource('libros', LibroController::class)->middleware('auth');
+
+Route::group(['middleware' => ['auth']], function() {
+    // Grupo de rutas para libros con prefijo y nombres
+    Route::prefix('libros')->name('libros.')->group(function() {
+        // Ruta para listado de libros (accesible para usuarios y admin)
+        Route::get('/', [LibroController::class, 'index'])->name('index');
+
+        // Rutas de creación (solo admin)
+        Route::middleware('can:libros.create')->group(function() {
+            Route::get('/crear', [LibroController::class, 'create'])->name('create');
+            Route::post('/', [LibroController::class, 'store'])->name('store');
+        });
+
+        // Ruta para ver detalles (accesible para usuarios y admin)
+        Route::get('/{libro}', [LibroController::class, 'show'])->name('show');
+
+        // Rutas de edición (solo admin)
+        Route::middleware('can:libros.edit')->group(function() {
+            Route::get('/{libro}/editar', [LibroController::class, 'edit'])->name('edit');
+            Route::put('/{libro}', [LibroController::class, 'update'])->name('update');
+        });
+
+        // Ruta de eliminación (solo admin)
+        Route::delete('/{libro}', [LibroController::class, 'destroy'])
+            ->middleware('can:libros.delete')
+            ->name('destroy');
+    });
+});
