@@ -11,8 +11,11 @@
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="true">
                 
                 <li class="nav-item">
+                    
+                    <i class="bi bi-book-half"></i>
+                    
                     <a href="{{ route('libros.index') }}" target="frameprincipal" class="nav-link">
-                        <i class="far fa-book"></i>
+                       
                         <p>Libros</p>
                     </a>
                 </li>
