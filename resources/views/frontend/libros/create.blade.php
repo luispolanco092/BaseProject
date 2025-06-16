@@ -25,6 +25,9 @@
         @csrf
         @include('frontend.libros.form')
         <button type="submit" class="btn btn-success">Guardar</button>
+        <a href="{{ route('libros.index') }}" class="btn btn-primary btn-action">
+                                <i class="bi bi-list-ul"></i> Volver
+                            </a>
     </form>
     @else
         <div class="alert alert-warning">No tienes permiso para crear libros.</div>
@@ -65,7 +68,7 @@ document.getElementById('libroForm').addEventListener('submit', function(e) {
 //localStorage
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('libroForm');
- 
+
     if (localStorage.getItem('libroData')) {
         const libroData = JSON.parse(localStorage.getItem('libroData'));
         form.titulo.value = libroData.titulo || '';
@@ -74,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
         form.anio.value = libroData.anio || '';
         form.estado.value = libroData.estado || 'disponible';
     }
- 
+
     form.addEventListener('input', function() {
         const libroData = {
             titulo: form.titulo.value,

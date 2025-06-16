@@ -21,4 +21,3 @@
         <option value="prestado" {{ (old('estado', $libro->estado ?? '') == 'prestado') ? 'selected' : '' }}>Prestado</option>
     </select>
 </div>
-<button class="btn btn-success">Guardar</button>
