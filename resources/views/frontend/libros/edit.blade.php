@@ -62,6 +62,32 @@ document.getElementById('libroForm').addEventListener('submit', function(e) {
     }
 });
 </script>
+    <script>
+//localStorage
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('libroForm');
+ 
+    if (localStorage.getItem('libroData')) {
+        const libroData = JSON.parse(localStorage.getItem('libroData'));
+        form.titulo.value = libroData.titulo || '';
+        form.autor.value = libroData.autor || '';
+        form.genero.value = libroData.genero || '';
+        form.anio.value = libroData.anio || '';
+        form.estado.value = libroData.estado || 'disponible';
+    }
+ 
+    form.addEventListener('input', function() {
+        const libroData = {
+            titulo: form.titulo.value,
+            autor: form.autor.value,
+            genero: form.genero.value,
+            anio: form.anio.value,
+            estado: form.estado.value,
+        };
+        localStorage.setItem('libroData', JSON.stringify(libroData));
+    });
+});
+</script>
 
 </body>
 </html>
