@@ -89,6 +89,9 @@ document.addEventListener('DOMContentLoaded', function() {
         };
         localStorage.setItem('libroData', JSON.stringify(libroData));
     });
+    form.addEventListener('submit', function() {
+        localStorage.removeItem('libroData');
+    });
 });
 </script>
 
