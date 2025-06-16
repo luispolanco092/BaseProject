@@ -95,3 +95,5 @@ Route::group(['middleware' => ['auth']], function() {
             ->name('destroy');
     });
 });
+
+Route::get('/clima', [ClimaController::class, 'index'])->name('clima.index');
