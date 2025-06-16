@@ -38,19 +38,19 @@ document.getElementById('libroForm').addEventListener('submit', function(e) {
     let errors = [];
 
     let titulo = form.titulo.value.trim();
-    if (!titulo) errors.push("El título es obligatorio.");
+    if (!titulo) errors.push("el título es obligatorio.");
 
     let autor = form.autor.value.trim();
-    if (!autor) errors.push("El autor es obligatorio.");
+    if (!autor) errors.push("el autor es obligatorio.");
 
     let genero = form.genero.value.trim();
-    if (!genero) errors.push("El género es obligatorio.");
+    if (!genero) errors.push("el género es obligatorio.");
 
     let anio = form.anio.value.trim();
-    let currentYear = new Date().getFullYear();
-    if (!anio) errors.push("El año es obligatorio.");
-    else if (!/^\d{4}$/.test(anio)) errors.push("El año debe tener 4 dígitos.");
-    else if (anio < 1000 || anio > currentYear) errors.push("El año debe estar entre 1000 y " + currentYear + ".");
+    let currentyear = new date().getfullyear();
+    if (!anio) errors.push("el año es obligatorio.");
+    else if (!/^\d{4}$/.test(anio)) errors.push("el año debe tener 4 dígitos.");
+    else if (anio < 1000 || anio > currentyear) errors.push("el año debe estar entre 1000 y " + currentyear + ".");
 
     let estado = form.estado.value;
     if (estado !== 'disponible' && estado !== 'prestado') errors.push("Estado inválido.");
@@ -61,6 +61,7 @@ document.getElementById('libroForm').addEventListener('submit', function(e) {
     }
 });
 </script>
+
 
 </body>
 </html>
