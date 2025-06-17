@@ -1,4 +1,4 @@
-php artisan make:controller ClimaController
+<?php
  
 namespace App\Http\Controllers;
  
