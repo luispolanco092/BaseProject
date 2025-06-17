@@ -11,51 +11,57 @@
 - **Darwin Geovanny Zaldaña Avila**  - ZA20003
 
 ---
-## 🌦️ Consumo de API del Clima (OpenWeatherMap)
+
+## 📚 CRUD: Registro de Libros
  
-Como parte del requerimiento **4. Consumo de API Rest Moderna**, se integró exitosamente una API pública de clima proporcionada por [OpenWeatherMap](https://openweathermap.org/api). Esta funcionalidad permite consultar información meteorológica en tiempo real para cualquier ciudad del mundo.
+Como parte del requerimiento principal del Proyecto Final, se desarrolló un **CRUD completo** para gestionar el Registro de Libros. Este módulo permite realizar operaciones de **crear, leer, actualizar y eliminar** libros en una base de datos relacional usando Laravel 12 y MariaDB.
  
-### 🔧 Tecnologías y herramientas utilizadas
+### 🧾 Campos incluidos
  
-- **Laravel 12**: framework PHP utilizado como base para la aplicación web.
-- **Base de Datos MariaDB**: un sistema de gestión de base de datos relacional de codigo abierto que deriva de MySQL compatible con proyectos desarrollados en Laravel.
+Cada libro registrado contiene los siguientes campos:
+ 
+- **Título**
+- **Autor**
+- **Género**
+- **Año**
+- **Estado**: puede ser _prestado_ o _disponible_
+ 
+---
+ 
+### ⚙️ Funcionalidades implementadas
+ 
+- ✅ **Listado completo de libros** en una tabla responsiva
+- ✅ **Creación de nuevos libros** con formularios validados
+- ✅ **Edición de registros existentes**
+- ✅ **Eliminación lógica y/o permanente** de libros
+- ✅ **Control de permisos** usando directivas `@can`, restringiendo accesos según roles de usuario
+- ✅ **Validaciones en backend** usando Laravel Validator
+- ✅ **Validaciones en frontend** usando JavaScript
+- ✅ **Mensajes y alertas visuales** usando clases de Bootstrap para mejorar la experiencia del usuario
+ 
+---
+ 
+### 💾 Tecnologías utilizadas
+ 
+- **Laravel 12**: framework principal
+- **Blade**: motor de plantillas
+- **Bootstrap 5**: interfaz y estilos responsivos
+- **MariaDB**: motor de base de datos relacional
+- **Laravel Gate/Policies**: para control de permisos
+- **JavaScript (vanilla)**: validaciones de formularios en el navegador
+
+ ---
+
+ ### 🔧 Tecnologías y herramientas utilizadas
+ 
 - **Axios**: librería JavaScript para enviar peticiones HTTP desde el cliente.
 - **Bootstrap 5**: framework CSS usado para dar estilo y estructura visual a los resultados (cards y tablas).
 - **JavaScript (ES6+)**: lógica de interacción en la vista, incluyendo uso de funciones, validaciones, manipulación del DOM y manejo de respuestas JSON.
 - **OpenWeatherMap API**: fuente externa de datos climáticos en formato JSON.
- 
+
 ---
 
-### 📌 Detalles implementados
+## 🌦️ Consumo de API del Clima (OpenWeatherMap)
  
-  - Se consumió la API REST de OpenWeatherMap mediante peticiones `GET` usando **Axios** desde el frontend.
-  - Se procesó la **respuesta en formato JSON**, accediendo a campos como:
-  - Temperatura actual, mínima y máxima.
-  - Humedad relativa.
-  - Velocidad del viento.
-  - Descripción textual del clima.
-  - Ícono representativo del estado climático.
-  - Código del país (`sys.country`), utilizado para validaciones condicionales.
-  - Los resultados se presentaron de forma visual y amigable en una interfaz estructurada:
-  - Una **card** muestra los datos principales de la ciudad consultada.
-  - Una **tabla** con más detalles meteorológicos.
-  - Se incluyó un **ícono del clima** dinámico y representativo.
-  - Se agregó la **hora local exacta**, solo visible si la ciudad consultada pertenece a **El Salvador**, usando validación por país.
-  - La clave de la API se almacena de forma segura en el archivo `.env`, siguiendo buenas prácticas.
-
-    ### 🖼️ Ejemplo de visualización
-Clima en San Salvador
-☁️ 22.4 °C - lluvia ligera
-Fecha y hora local: 16/06/2025, 04:30:21 PM
- 
-+-------------------+-------------------+-----------+-----------+
-| Temperatura Mín. | Temperatura Máx. | Humedad | Viento        |
-+-------------------+-------------------+-----------+-----------+
-| 20.5 °C          | 24.3 °C          | 89 %    | 3.2 m/s       |
-+-------------------+-------------------+-----------+-----------+
- 
- 
-Esta sección cumple de forma completa y precisa con los criterios del requerimiento **4.b del Proyecto Final**, incluyendo el uso de APIs modernas, el procesamiento de datos JSON y su visualización con componentes responsivos.
------
-
-
+Como parte del requerimiento **4. Consumo de API Rest Moderna**, se integró exitosamente una API pública de clima proporcionada por [OpenWeatherMap](https://openweathermap.org/api). Esta funcionalidad permite consultar información meteorológica en tiempo real para cualquier ciudad del mundo.
+  
