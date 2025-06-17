@@ -4,11 +4,11 @@
 
 ### Integrantes del Equipo:
 
-- **Vilma Melissa Alvarado Parada**  - AP22024
-- **Luis Miguel Polanco Pacheco**    - PP22054
-- **Wilian Alberto Salinas Vásquez** - SV99004
-- **William Orlando Rivera Aragón**  - RA22045
 - **Darwin Geovanny Zaldaña Avila**  - ZA20003
+- **Luis Miguel Polanco Pacheco**    - PP22054
+- **Vilma Melissa Alvarado Parada**  - AP22024
+- **William Orlando Rivera Aragón**  - RA22045
+- **Wilian Alberto Salinas Vásquez** - SV99004
 
 ---
 
