@@ -6,8 +6,8 @@ use Illuminate\Http\Request;
  
 class ClimaController extends Controller
 {
-    public function index()
-    {
-        return view('clima');
+    public function index() {
+        $apiKey = env('OPENWEATHERMAP_API_KEY');
+        return view('clima', compact('apiKey'));
     }
 }
