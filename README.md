@@ -4,11 +4,11 @@
 
 ### Integrantes del Equipo:
 
-- **Vilma Melissa Alvarado Parada** - AP22024
-- **Luis Miguel Polanco Pacheco** - PP22054
+- **Vilma Melissa Alvarado Parada**  - AP22024
+- **Luis Miguel Polanco Pacheco**    - PP22054
 - **Wilian Alberto Salinas Vásquez** - SV99004
-- **William Orlando Rivera Aragón** - RA22045
-- **Darwin Geovanny Zaldaña Avila** - ZA20003
+- **William Orlando Rivera Aragón**  - RA22045
+- **Darwin Geovanny Zaldaña Avila**  - ZA20003
 
 ---
 ## 🌦️ Consumo de API del Clima (OpenWeatherMap)
@@ -24,6 +24,24 @@ Como parte del requerimiento **4. Consumo de API Rest Moderna**, se integró exi
 - **JavaScript (ES6+)**: lógica de interacción en la vista, incluyendo uso de funciones, validaciones, manipulación del DOM y manejo de respuestas JSON.
 - **OpenWeatherMap API**: fuente externa de datos climáticos en formato JSON.
  
-
-
 ---
+
+### 📌 Detalles implementados
+ 
+  - Se consumió la API REST de OpenWeatherMap mediante peticiones `GET` usando **Axios** desde el frontend.
+  - Se procesó la **respuesta en formato JSON**, accediendo a campos como:
+  - Temperatura actual, mínima y máxima.
+  - Humedad relativa.
+  - Velocidad del viento.
+  - Descripción textual del clima.
+  - Ícono representativo del estado climático.
+  - Código del país (`sys.country`), utilizado para validaciones condicionales.
+  - Los resultados se presentaron de forma visual y amigable en una interfaz estructurada:
+  - Una **card** muestra los datos principales de la ciudad consultada.
+  - Una **tabla** con más detalles meteorológicos.
+  - Se incluyó un **ícono del clima** dinámico y representativo.
+  - Se agregó la **hora local exacta**, solo visible si la ciudad consultada pertenece a **El Salvador**, usando validación por país.
+  - La clave de la API se almacena de forma segura en el archivo `.env`, siguiendo buenas prácticas.
+    
+-----
+
