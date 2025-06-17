@@ -58,3 +58,4 @@ Fecha y hora local: 16/06/2025, 04:30:21 PM
 Esta sección cumple de forma completa y precisa con los criterios del requerimiento **4.b del Proyecto Final**, incluyendo el uso de APIs modernas, el procesamiento de datos JSON y su visualización con componentes responsivos.
 -----
 
+
