@@ -17,7 +17,12 @@
                         <p>Libros</p>
                     </a>
                 </li>
-                
+                <li class="nav-item">
+                        <a href="{{ url('/clima') }}" target="frameprincipal" class="nav-link">
+                        <i class="fas fa-cloud nav-icon"></i>
+                        <p>Clima</p>
+                    </a>
+                </li>
                 <!-- ROLES Y PERMISO -->
                 @can('sidebar.roles.y.permisos')
                  <li class="nav-item">
@@ -44,18 +49,12 @@
                                 <p>Usuario</p>
                             </a>
                         </li>
-
                     </ul>
                  </li>
+                
                 @endcan
-
-
-
-
             </ul>
         </nav>
-
-
     </div>
 </aside>
 
