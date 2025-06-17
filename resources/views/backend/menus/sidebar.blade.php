@@ -13,7 +13,7 @@
                 <li class="nav-item">
                  
                     <a href="{{ route('libros.index') }}" target="frameprincipal" class="nav-link">
-                       <i class="fas fa-book"></i>
+                       <i class="fas fa-book nav-icon"></i>
                        <p>Libros</p>
                     </a>
                 </li>
