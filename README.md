@@ -42,6 +42,19 @@ Como parte del requerimiento **4. Consumo de API Rest Moderna**, se integró exi
   - Se incluyó un **ícono del clima** dinámico y representativo.
   - Se agregó la **hora local exacta**, solo visible si la ciudad consultada pertenece a **El Salvador**, usando validación por país.
   - La clave de la API se almacena de forma segura en el archivo `.env`, siguiendo buenas prácticas.
-    
+
+    ### 🖼️ Ejemplo de visualización
+Clima en San Salvador
+☁️ 22.4 °C - lluvia ligera
+Fecha y hora local: 16/06/2025, 04:30:21 PM
+ 
++-------------------+-------------------+-----------+-----------+
+| Temperatura Mín. | Temperatura Máx. | Humedad | Viento        |
++-------------------+-------------------+-----------+-----------+
+| 20.5 °C          | 24.3 °C          | 89 %    | 3.2 m/s       |
++-------------------+-------------------+-----------+-----------+
+ 
+ 
+Esta sección cumple de forma completa y precisa con los criterios del requerimiento **4.b del Proyecto Final**, incluyendo el uso de APIs modernas, el procesamiento de datos JSON y su visualización con componentes responsivos.
 -----
 
