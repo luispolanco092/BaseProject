@@ -10,6 +10,7 @@ use App\Http\Controllers\Backend\Configuracion\ConfiguracionController;
 use App\Http\Controllers\Backend\Registro\RegistroController;
 use App\Http\Controllers\XmlController;
 use App\Http\Controllers\CalculadoraController;
+use App\Http\Controllers\ClimaController;
 
 use App\Http\Controllers\Backend\Dashboard\DashboardController;
 use App\Http\Controllers\LibroController;
