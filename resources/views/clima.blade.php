@@ -27,28 +27,28 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
     <script>
-        function consultarClima() {
+        const API_KEY = "{{ $apiKey }}";
+
+        async function consultarClima() {
             const ciudad = document.getElementById('ciudad').value.trim();
             if (ciudad === '') {
                 alert('Por favor escribe una ciudad.');
                 return;
             }
 
-            const apiKey = 'c14bcc92d0b152e9357c1fe1857a548d'; // Tu API Key
-            const url = `https://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=${apiKey}&units=metric&lang=es`;
+            const url = `https://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=${API_KEY}&units=metric&lang=es`;
 
-            axios.get(url)
-                .then(response => {
-                    const data = response.data;
-                    document.getElementById('resultado').classList.remove('d-none');
-                    document.getElementById('nombreCiudad').innerText = `Clima en ${data.name}`;
-                    document.getElementById('temperatura').innerText = `Temperatura: ${data.main.temp} °C`;
-                    document.getElementById('descripcion').innerText = `Descripción: ${data.weather[0].description}`;
-                })
-                .catch(error => {
-                    alert("Ciudad no encontrada o error en la API");
-                    console.error(error);
-                });
+            try {
+                const response = await axios.get(url);
+                const data = response.data;
+                document.getElementById('resultado').classList.remove('d-none');
+                document.getElementById('nombreCiudad').innerText = `Clima en ${data.name}`;
+                document.getElementById('temperatura').innerText = `Temperatura: ${data.main.temp} °C`;
+                document.getElementById('descripcion').innerText = `Descripción: ${data.weather[0].description}`;
+            } catch (error) {
+                alert("Error al consultar el clima. Verifica el nombre de la ciudad.");
+                console.error(error);
+            }
         }
     </script>
 </body>
