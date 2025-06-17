@@ -13,8 +13,8 @@
                 <li class="nav-item">
                  
                     <a href="{{ route('libros.index') }}" target="frameprincipal" class="nav-link">
-                       <i class="bi bi-book-half"></i>
-                        <p>Libros</p>
+                       <i class="fas fa-book"></i>
+                       <p>Libros</p>
                     </a>
                 </li>
                 <li class="nav-item">
