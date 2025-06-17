@@ -56,7 +56,7 @@ Cada libro registrado contiene los siguientes campos:
  
 - **Axios**: librería JavaScript para enviar peticiones HTTP desde el cliente.
 - **Bootstrap 5**: framework CSS usado para dar estilo y estructura visual a los resultados (cards y tablas).
-- **JavaScript (ES6+)**: lógica de interacción en la vista, incluyendo uso de funciones, validaciones, manipulación del DOM y manejo de respuestas JSON.
+- **JavaScript**: lógica de interacción en la vista, incluyendo uso de funciones, validaciones, manipulación del DOM y manejo de respuestas JSON.
 - **OpenWeatherMap API**: fuente externa de datos climáticos en formato JSON.
 
 ---
